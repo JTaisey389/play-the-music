@@ -7,3 +7,12 @@ function itemScan () {
     trigger(prompt)
   }
 }
+
+function transaction () {
+  if(transactionOccurs) {
+    itemScan === true;
+  } else 
+  false;
+}
+
+module.exports = transaction;
