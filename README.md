@@ -14,4 +14,8 @@
 
 ## Problem Domain
 
-- As a user I would like the tune or response to persist for a set amount of time after the card or phone tap event takes place. The solution is to set up a conditional event that will trigger the tune or response to play for a set interval. 
+- As a user I would like the tune or response to persist for a set amount of time after the card or phone tap event takes place. The solution is to set up a conditional event that will trigger the tune or response to play for a set interval.
+
+## Wireframes
+
+![Link](Assets/Play-the-music-V1.jpg)
