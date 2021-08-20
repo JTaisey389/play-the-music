@@ -1,8 +1,15 @@
-'use strict'
+// 'use strict'
 
-function triggerReader () {
-  onkeypress(transaction) === true;
-  return console.log('key was pressed');
-}
+// function triggerReader () {
+//   onkeypress(transaction) === true;
+//   return console.log('key was pressed');
+// }
 
-module.exports = triggerReader;
+// function cardInsert () {
+//   let paymentType = cardInserted;
+//   if(paymentType) {
+//     onclick === true;
+//   } false;
+// }
+
+// module.exports = triggerReader;
