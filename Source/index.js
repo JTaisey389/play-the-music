@@ -95,15 +95,20 @@ function selectOption() {
     }
     if(creditTrans) {
       let signature = '';
-      if(signature === `${input}`) {
-        true
-      } else {
-        let creditPrompt = 'Please sign and press okay'
-        if (signature || creditPrompt) {
-          
+      onmousemove(signature.split)
+        while(onmouseover) {
+          let padInput = `${windowsigned}`;
+          let signatureRequire
+          if(signature === padInput) {
+            true;
+          } else {
+            if(padInput != signatureRequire) {
+              console.log('Please sign and press okay')
+            }
+            false;
+          }
         }
       }
-    }
   }
 }
 
