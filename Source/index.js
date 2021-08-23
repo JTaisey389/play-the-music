@@ -11,7 +11,7 @@ function transaction() {
 
 function itemScan() {
   let activateReader = transaction;
-  let prompt = "Please insert or tap card";
+  let prompt = "Insert card, tap car or phone tap";
   if (activateReader) {
     trigger(prompt);
   }
@@ -27,9 +27,8 @@ function cardReady() {
   if (cardInserted) {
     onclick === true;
   } else {
-    itemScan() // TODO: May need to revise the call stack on this function, this may cause a loop due to the itemScan being called twice
+    itemScan(); // TODO: May need to revise the call stack on this function, this may cause a loop due to the itemScan being called twice
   }
-
 }
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // NOTE: Card tap or phone tap would need to connect to the cashback
@@ -57,13 +56,14 @@ function paymentSelect() {
       let amount2 = "$40";
       let amount3 = "$60";
       let display = (amount1, amount2, amount3);
-      display();
+      display(selectOption);
     }
-    if (red) { // Edge Case to skip cashback
+    if (red) {
+      // Edge Case to skip cashback
       let debt = "Debt";
       let credit = "Credit";
       let cardType = (debt, credit);
-      cardType();
+      cardType(selectOption);
     }
   }
 }
@@ -72,46 +72,47 @@ function selectOption() {
   let cardInsert = option1;
   let cardTap = option2;
   let phoneTap = option3;
-  if(cardInsert || cardTap || phoneTap) {
-    let debitTrans = pinRequired;
-    let creditTrans = noPinRequired;
-    if(debitTrans) {
-      let array = [];
-      // array === ['','','',''];
-      onkeypress(array.push) 
-        // TODO: Add in a conditional that will evaluate the set pin of the users card and compare it to the pin-pads input
-        while(onkeypress) {
-          let padinput = comparison;
-          array === ['','','',''];
-          if(padinput === array) {
-            true;
-          } else {
-            if(padinput != array) {
-              console.log('PIN number must be four digits')
-            }
-            false;
-          }
-        } 
-    }
-    if(creditTrans) {
-      let signature = '';
-      onmousemove(signature.split)
-        while(onmouseover) {
-          let padInput = `${windowsigned}`;
-          let signatureRequire
-          if(signature === padInput) {
-            true;
-          } else {
-            if(padInput != signatureRequire) {
-              console.log('Please sign and press okay')
-            }
-            false;
-          }
-        }
-      }
+  if (cardInsert || cardTap || phoneTap) {
+    debitCard(), creditCard()
   }
 }
 
-function onkeypress () {
-  
+function debitCard() {
+  if (debitTrans) {
+    let array = [];
+    // array === ['','','',''];
+    onkeypress(array.push);
+    // TODO: Add in a conditional that will evaluate the set pin of the users card and compare it to the pin-pads input
+    while (onkeypress) {
+      let padInput = comparison;
+      array === ["", "", "", ""];
+      if (padInput === array) {
+        true;
+      } else {
+        if (padInput != array) {
+          console.log("PIN number must be four digits");
+        }
+        false;
+      }
+    }
+  }
+}
+
+function creditCard() {
+  if (creditTrans) {
+    let signature = "";
+    onmousemove(signature.split);
+    while (onmouseover) {
+      let padInput = `${windowsigned}`;
+      let signatureRequire;
+      if (signature === padInput) {
+        true;
+      } else {
+        if (padInput != signatureRequire) {
+          console.log("Please sign and press okay");
+        }
+        false;
+      }
+    }
+  }
 }
