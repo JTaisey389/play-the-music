@@ -1,5 +1,7 @@
 "use strict";
 
+const { default: JestHooks } = require("jest-watcher/build/JestHooks");
+
 // const triggerReader = require('../Source/event');
 
 function transaction() {
@@ -107,6 +109,7 @@ function debitCard() {
       }
     }
   }
+  cardRemoval;
 }
 
 function creditCard() {
@@ -126,6 +129,7 @@ function creditCard() {
       }
     }
   }
+  cardRemoval;
 }
 
 function phonePayment() {
@@ -146,5 +150,27 @@ function phonePayment() {
         false;
       }
     }
+  }
+  cardRemoval;
+}
+
+function storeGenerator () {
+  let storeName = ['Trader-Joes', 'Safeway', 'Fred-Meyer', 'QFC'];
+  for(var storeName = 0; storeName < 0; storeName++);
+  storeName();
+}
+
+// TODO refactor the card removal for the phone payment
+function cardRemoval () {
+  let prompt = 'Please remove card'
+  let displayShow = ('Thank you for shopping at', + `${storeGenerator}`);
+  if(debitCard || creditCard) {
+    prompt()
+  }
+  if(phoneUsed) {
+    displayShow();
+  }
+  if(cardRemoved || phoneUsed) {
+    displayShow()
   }
 }
