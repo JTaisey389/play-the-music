@@ -77,11 +77,20 @@ function selectOption() {
     let creditTrans = noPinRequired;
     if(debitTrans) {
       let array = [];
-      array === ['','','',''];
+      // array === ['','','',''];
       onkeypress(array.push) 
-      // REFACTOR AND THINK ABOUT THE PROCESS
-        if(onkeypress) {
-          array === ['', '','', ''] 
+        // TODO: Add in a conditional that will evaluate the set pin of the users card and compare it to the pin-pads input
+        while(onkeypress) {
+          let padinput = comparison;
+          array === ['','','',''];
+          if(padinput === array) {
+            true;
+          } else {
+            if(padinput != array) {
+              console.log('PIN number must be four digits')
+            }
+            false;
+          }
         } 
     }
     if(creditTrans) {
@@ -96,6 +105,8 @@ function selectOption() {
       }
     }
   }
-  
+}
 
+function onkeypress () {
+  
 }
