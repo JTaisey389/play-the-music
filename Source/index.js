@@ -11,14 +11,14 @@ function transaction() {
 
 function itemScan() {
   let activateReader = transaction;
-  let prompt = "Insert card, tap car or phone tap";
+  let prompt = "Insert card, tap card or phone tap";
   if (activateReader) {
     trigger(prompt);
   }
 }
 
 function triggerReader() {
-  onkeypress(transaction) === true;
+  onkeypress(transaction === true);
   return console.log("key was pressed");
 }
 
@@ -30,6 +30,17 @@ function cardReady() {
     itemScan(); // TODO: May need to revise the call stack on this function, this may cause a loop due to the itemScan being called twice
   }
 }
+
+function phoneTaped() {
+  let phoneTransaction;
+  let prompt = "Insert card, tap card or phone tap";
+  if(phoneTransaction) {
+    paymentSelect() 
+    true;
+  } else {
+    trigger(prompt)
+  }
+}
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // NOTE: Card tap or phone tap would need to connect to the cashback
 
@@ -38,7 +49,7 @@ function cardReady() {
 
 //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 function paymentSelect() {
-  if (cardReady) {
+  if (cardReady || phoneTaped) {
     let cardInsert = option1;
     let cardTap = option2;
     let phoneTap = option3;
@@ -73,7 +84,7 @@ function selectOption() {
   let cardTap = option2;
   let phoneTap = option3;
   if (cardInsert || cardTap || phoneTap) {
-    debitCard(), creditCard()
+    debitCard(), creditCard(), phonePayment()
   }
 }
 
@@ -110,6 +121,27 @@ function creditCard() {
       } else {
         if (padInput != signatureRequire) {
           console.log("Please sign and press okay");
+        }
+        false;
+      }
+    }
+  }
+}
+
+function phonePayment() {
+  if (phoneTrans) {
+    let array = [];
+    // array === ['','','',''];
+    onkeypress(array.push);
+    // TODO: Add in a conditional that will evaluate the set pin of the users card and compare it to the pin-pads input
+    while (onkeypress) {
+      let padInput = comparison;
+      array === ["", "", "", ""];
+      if (padInput === array) {
+        true;
+      } else {
+        if (padInput != array) {
+          console.log("PIN number must be four digits");
         }
         false;
       }
