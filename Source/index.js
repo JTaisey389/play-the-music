@@ -1,6 +1,7 @@
 "use strict";
 
 const { default: JestHooks } = require("jest-watcher/build/JestHooks");
+const { delay } = require("lodash");
 
 // const triggerReader = require('../Source/event');
 
@@ -160,7 +161,6 @@ function storeGenerator () {
   storeName();
 }
 
-// TODO refactor the card removal for the phone payment
 function cardRemoval () {
   let cardRemoved = displayShow
   let prompt = 'Please remove card'
@@ -170,3 +170,16 @@ function cardRemoval () {
   } 
   onkeypress (cardRemoved);
 }
+
+function totalKey () {
+  onmousedown(totalPressed) 
+  if(onmousedown) {
+    if(debitCard() || creditCard() || phonePayment() == !finished) {
+      let totalPressed = transComplete
+      transComplete = delay('1000');
+      let audio = new Audio('Assets/58 spring wind chimes crystal sounds.mp3')
+      totalPressed(audio);
+    }
+  }  
+}
+onmousewheel(totalKey);
