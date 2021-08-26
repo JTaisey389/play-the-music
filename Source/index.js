@@ -162,15 +162,11 @@ function storeGenerator () {
 
 // TODO refactor the card removal for the phone payment
 function cardRemoval () {
+  let cardRemoved = displayShow
   let prompt = 'Please remove card'
   let displayShow = ('Thank you for shopping at', + `${storeGenerator}`);
   if(debitCard || creditCard) {
     prompt()
-  }
-  if(phoneUsed) {
-    displayShow();
-  }
-  if(cardRemoved || phoneUsed) {
-    displayShow()
-  }
+  } 
+  onkeypress (cardRemoved);
 }
