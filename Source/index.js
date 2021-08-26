@@ -1,11 +1,6 @@
 "use strict";
 
-const { default: JestHooks } = require("jest-watcher/build/JestHooks");
-const { delay } = require("lodash");
-
-// const triggerReader = require('../Source/event');
-
-function transaction() {
+function transactionStart() {
   if (triggerReader) {
     itemScan === true;
   }
@@ -13,15 +8,15 @@ function transaction() {
 }
 
 function itemScan() {
-  let activateReader = transaction;
+  let activateReader = transactionStart;
   let prompt = "Insert card, tap card or phone tap";
   if (activateReader) {
-    trigger(prompt);
+    prompt();
   }
 }
 
 function triggerReader() {
-  onkeypress(transaction === true);
+  onkeypress(transactionStart === true);
   return console.log("key was pressed");
 }
 
@@ -172,7 +167,8 @@ function cardRemoval () {
 }
 
 function totalKey () {
-  onmousedown(totalPressed) 
+  onmousedown(totalPressed)
+  let finished = false;
   if(onmousedown) {
     if(debitCard() || creditCard() || phonePayment() == !finished) {
       let totalPressed = transComplete
