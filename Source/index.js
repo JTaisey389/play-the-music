@@ -1,10 +1,8 @@
 "use strict";
 
-function transactionStart() {
-  if (triggerReader) {
-    itemScan === true;
-  }
-  false;
+function triggerReader() {
+  onkeypress(transactionStart === true);
+  return console.log("key was pressed");
 }
 
 function itemScan() {
@@ -15,10 +13,16 @@ function itemScan() {
   }
 }
 
-function triggerReader() {
-  onkeypress(transactionStart === true);
-  return console.log("key was pressed");
+function transactionStart() {
+  if (triggerReader) {
+    itemScan === true;
+  }
+  false;
 }
+
+
+
+
 
 function cardReady() {
   let cardInserted = paymentSelect;
