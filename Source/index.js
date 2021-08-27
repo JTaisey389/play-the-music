@@ -5,14 +5,6 @@ function triggerReader() {
   return console.log("key was pressed");
 }
 
-function itemScan() {
-  let activateReader = transactionStart;
-  let prompt = "Insert card, tap card or phone tap";
-  if (activateReader) {
-    prompt();
-  }
-}
-
 function transactionStart() {
   if (triggerReader) {
     itemScan === true;
@@ -20,16 +12,18 @@ function transactionStart() {
   false;
 }
 
+function itemScan() {
+  let prompt = "Insert card, tap card or phone tap";
+  prompt();
+}
 
-
-
-
-function cardReady() {
-  let cardInserted = paymentSelect;
-  if (cardInserted) {
+function cardInserted() {
+  let cardReady = paymentSelect;
+  if (cardReady) {
     onclick === true;
   } else {
-    itemScan(); // TODO: May need to revise the call stack on this function, this may cause a loop due to the itemScan being called twice
+    let prompt = "Insert card, tap card or phone tap";
+    prompt();
   }
 }
 
@@ -40,18 +34,12 @@ function phoneTaped() {
     paymentSelect() 
     true;
   } else {
-    trigger(prompt)
+    prompt();
   }
 }
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-// NOTE: Card tap or phone tap would need to connect to the cashback
 
-// TODO: Create the conditional payment for when a phone is used
-// TODO: Create the conditional payment for when a card is taped
-
-//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 function paymentSelect() {
-  if (cardReady || phoneTaped) {
+  if (cardInserted || phoneTaped) {
     let cardInsert = option1;
     let cardTap = option2;
     let phoneTap = option3;
@@ -69,14 +57,14 @@ function paymentSelect() {
       let amount2 = "$40";
       let amount3 = "$60";
       let display = (amount1, amount2, amount3);
-      display(selectOption);
+      display();
     }
     if (red) {
       // Edge Case to skip cashback
       let debt = "Debt";
       let credit = "Credit";
       let cardType = (debt, credit);
-      cardType(selectOption);
+      cardType();
     }
   }
 }

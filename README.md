@@ -53,4 +53,7 @@
 
 ## Call Stack
 
-- Function tiggerReader activates the start of the transaction with an onkeypress. The onkeypress calls the transactionStart function which is evaluated as true. The evaluation of true will help other functions latter in the call stack.
+- Function tiggerReader activates the start of the transaction with an onkeypress. The onkeypress calls the transactionStart function which is evaluated as true. The evaluation of true will help other functions latter in the call stack
+
+- Once the transactionStart function is called the edge case for the triggerReader is used to check and make sure the item was scanned
+
