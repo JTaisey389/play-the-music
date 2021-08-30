@@ -17,26 +17,21 @@ function itemScan() {
   prompt();
 }
 
-function cardInserted() {
+function paymentSort () {
   let cardReady = paymentSelect;
+  let phoneTransaction;
+  let prompt = 'Insert card, tap card or tap phone';
   if (cardReady) {
     onclick === true;
   } else {
-    let prompt = "Insert card, tap card or tap phone";
-    prompt();
+    prompt()
   }
-}
-
-function phoneTaped() {
-  let phoneTransaction;
-  let prompt = "Insert card, tap card or tap phone";
-  if(phoneTransaction) {
-    paymentSelect() 
+  if (phoneTransaction) {
+    paymentSelect()
     true;
-  } else {
-    prompt();
   }
 }
+onkeypress(paymentSort);
 
 function paymentSelect() {
   let payOption1 = cardTransaction
