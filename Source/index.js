@@ -13,7 +13,7 @@ function transactionStart() {
 }
 
 function itemScan() {
-  let prompt = "Insert card, tap card or phone tap";
+  let prompt = "Insert card, tap card or tap phone";
   prompt();
 }
 
@@ -22,14 +22,14 @@ function cardInserted() {
   if (cardReady) {
     onclick === true;
   } else {
-    let prompt = "Insert card, tap card or phone tap";
+    let prompt = "Insert card, tap card or tap phone";
     prompt();
   }
 }
 
 function phoneTaped() {
   let phoneTransaction;
-  let prompt = "Insert card, tap card or phone tap";
+  let prompt = "Insert card, tap card or tap phone";
   if(phoneTransaction) {
     paymentSelect() 
     true;
@@ -39,7 +39,9 @@ function phoneTaped() {
 }
 
 function paymentSelect() {
-  if (cardInserted || phoneTaped) {
+  let payOption1 = cardTransaction
+  let payOption2 = phoneTransaction
+  if (payOption1 || payOption2 ) {
     let cardInsert = option1;
     let cardTap = option2;
     let phoneTap = option3;
