@@ -57,3 +57,5 @@
 
 - Once the transactionStart function is called the edge case for the triggerReader is used to check and make sure the item was scanned
 
+- As the transactionStart is called this activates the itemScan function to prompt the card reader to display "Insert card, tap card or tap phone"
+
