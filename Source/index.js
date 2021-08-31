@@ -17,26 +17,26 @@ function itemScan() {
   prompt();
 }
 
-function paymentSort () {
+function paymentSort() {
   let cardReady = paymentSelect;
   let phoneTransaction;
-  let prompt = 'Insert card, tap card or tap phone';
+  let prompt = "Insert card, tap card or tap phone";
   if (cardReady) {
     onclick === true;
   } else {
-    prompt()
+    prompt();
   }
   if (phoneTransaction) {
-    paymentSelect()
+    paymentSelect();
     true;
   }
 }
 onkeypress(paymentSort);
 
 function paymentSelect() {
-  let payOption1 = cardTransaction
-  let payOption2 = phoneTransaction
-  if (payOption1 || payOption2 ) {
+  let payOption1 = cardTransaction;
+  let payOption2 = phoneTransaction;
+  if (payOption1 || payOption2) {
     let cardInsert = option1;
     let cardTap = option2;
     let phoneTap = option3;
@@ -62,12 +62,11 @@ function paymentSelect() {
       let credit = "Credit";
       let cardType = (debit, credit);
       cardType();
-      if(cardInsert || cardTap || phoneTap == finished) {
+      if (cardInsert || cardTap || phoneTap == finished) {
         MouseEvent.altKey = debit(debitCard || phonePayment);
         MouseEvent.ctrlKey = credit(creditCard);
       }
     }
-    
   }
 }
 
@@ -115,58 +114,67 @@ function phonePayment() {
   cardRemoval;
 }
 
-function creditCard () {
-  if(creditTrans) {
-    let signature = '';
-    signature.split('');
+function creditCard() {
+  if (creditTrans) {
+    let finished = false;
+    let signature = "";
+    signature.split("");
     if (PointerEvent.pointermove) {
-      let padInput = signature
-      let green = 'Okay'
-      let red = 'Clear Signature'
-      if(green) {
+      let padInput = signature;
+      let green = "Okay";
+      let red = "Clear Signature";
+      if (green) {
         padInput();
       }
-      if(red){
+      if (red) {
         signature();
-        if(red == finished) {
-          padInput()
+        if (red == finished) {
+          padInput();
         }
       }
     } else {
       signature == !finished;
-      let prompt = 'Please sign and press okay';
-        prompt();
+      let prompt = "Please sign and press okay";
+      prompt();
     }
   }
-  cardRemoval()
+  cardRemoval();
 }
 
-function storeGenerator () {
-  let storeName = ['Trader-Joes', 'Safeway', 'Fred-Meyer', 'QFC'];
-  for(var storeName = 0; storeName < 0; storeName++);
+function storeGenerator() {
+  let storeName = [
+    "Trader-Joes",
+    "Safeway",
+    "Fred-Meyer",
+    "QFC",
+    "Walmart",
+    "Red-Apple",
+  ];
+  for (let storeName = 0; storeName < 0; storeName++) {
+    storeName(Math.random);
+  }
   storeName();
 }
 
-function cardRemoval () {
-  let cardRemoved = displayShow
-  let prompt = 'Please remove card'
-  let displayShow = ('Thank you for shopping at', + `${storeGenerator}`);
-  if(debitCard || creditCard) {
-    prompt()
-  } 
-  onkeypress(cardRemoved);
+function cardRemoval() {
+  let cardRemoved = readerDisplay;
+  let prompt = "Please remove card";
+  let readerDisplay = ("Thank you for shopping at", +`${storeGenerator}`);
+  if (debitCard || creditCard) {
+    prompt();
+  }
+  MouseEvent.altKey(cardRemoved);
 }
 
-function totalKey () {
-  onmousedown(totalPressed)
-  let finished = false;
-  if(onmousedown) {
-    if(debitCard() || creditCard() || phonePayment() == !finished) {
-      let totalPressed = transComplete
-      transComplete = delay('1000');
-      let audio = new Audio('Assets/58 spring wind chimes crystal sounds.mp3')
+function totalKey() {
+  if (MouseEvent.ctrlKey) {
+    let finished = false;
+    if (debitCard() || creditCard() || phonePayment() == !finished) {
+      MouseEvent.ctrlKey(totalPressed);
+      let totalPressed = delay('1000');
+      let audio = new Audio("Assets/58 spring wind chimes crystal sounds.mp3");
       totalPressed(audio);
     }
-  }  
+  }
 }
 onmousewheel(totalKey);
