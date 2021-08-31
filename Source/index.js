@@ -58,31 +58,52 @@ function paymentSelect() {
     }
     if (red) {
       // Edge Case to skip cashback
-      let debt = "Debt";
-
+      let debit = "Debit";
       let credit = "Credit";
-      let cardType = (debt, credit);
+      let cardType = (debit, credit);
       cardType();
+      if(cardInsert || cardTap || phoneTap == finished) {
+        MouseEvent.altKey = debit(debitCard || phonePayment);
+        MouseEvent.ctrlKey = credit(creditCard);
+      }
     }
-    if(cardInsert || cardTap || phoneTap == finished) {
-      
-    }
+    
   }
 }
 
-
-
-function selectOption() {
-  let cardInsert = option1;
-  let cardTap = option2;
-  let phoneTap = option3;
-  if (cardInsert || cardTap || phoneTap) {
-    debitCard(), creditCard(), phonePayment()
-  }
-}
+// function selectOption() {
+//   let cardInsert = option1;
+//   let cardTap = option2;
+//   let phoneTap = option3;
+//   if (cardInsert || cardTap || phoneTap) {
+//     debitCard(), creditCard(), phonePayment()
+//   }
+// }
 
 function debitCard() {
   if (debitTrans) {
+    let array = [];
+    // array === ['','','',''];
+    onkeypress(array.push);
+    // TODO: Add in a conditional that will evaluate the set pin of the users card and compare it to the pin-pads input
+    while (onkeypress) {
+      let padInput = comparison;
+      array === ["", "", "", ""];
+      if (padInput === array) {
+        true;
+      } else {
+        if (padInput != array) {
+          console.log("PIN number must be four digits");
+        }
+        false;
+      }
+    }
+  }
+  cardRemoval;
+}
+
+function phonePayment() {
+  if (phoneTrans) {
     let array = [];
     // array === ['','','',''];
     onkeypress(array.push);
@@ -123,27 +144,7 @@ function creditCard() {
   cardRemoval;
 }
 
-function phonePayment() {
-  if (phoneTrans) {
-    let array = [];
-    // array === ['','','',''];
-    onkeypress(array.push);
-    // TODO: Add in a conditional that will evaluate the set pin of the users card and compare it to the pin-pads input
-    while (onkeypress) {
-      let padInput = comparison;
-      array === ["", "", "", ""];
-      if (padInput === array) {
-        true;
-      } else {
-        if (padInput != array) {
-          console.log("PIN number must be four digits");
-        }
-        false;
-      }
-    }
-  }
-  cardRemoval;
-}
+
 
 function storeGenerator () {
   let storeName = ['Trader-Joes', 'Safeway', 'Fred-Meyer', 'QFC'];
