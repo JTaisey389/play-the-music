@@ -115,26 +115,50 @@ function phonePayment() {
   cardRemoval;
 }
 
-function creditCard() {
-  if (creditTrans) {
-    let signature = "";
-    onmousemove(signature.split);
-    while (onmouseover) {
-      let padInput = `${windowsigned}`;
-      let signatureRequire;
-      if (signature === padInput) {
-        true;
-      } else {
-        if (padInput != signatureRequire) {
-          console.log("Please sign and press okay");
-        }
-        false;
-      }
-    }
-  }
-  cardRemoval;
-}
+// function creditCard() {
+//   if (creditTrans) {
+//     let signature = "";
+//     onmousemove(signature.split);
+//     while (onmouseover) {
+//       let padInput = `${windowsigned}`;
+//       let signatureRequire;
+//       if (signature === padInput) {
+//         true;
+//       } else {
+//         if (padInput != signatureRequire) {
+//           console.log("Please sign and press okay");
+//         }
+//         false;
+//       }
+//     }
+//   }
+//   cardRemoval;
+// }
 
+function creditCard () {
+  if(creditTrans) {
+    let signature = '';
+    signature.split('');
+    if (PointerEvent.pointermove) {
+      let padInput = signature
+      let green = 'Okay'
+      let red = 'Clear Signature'
+      if(green) {
+        padInput();
+      }
+      if(red){
+        signature();
+        if(red == finished) {
+          padInput()
+        }
+      }
+    } else {
+      signature == !finished;
+      let prompt = 'Please sign and press okay';
+        prompt();
+    }
+  } 
+}
 
 
 function storeGenerator () {
