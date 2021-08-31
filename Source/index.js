@@ -71,15 +71,6 @@ function paymentSelect() {
   }
 }
 
-// function selectOption() {
-//   let cardInsert = option1;
-//   let cardTap = option2;
-//   let phoneTap = option3;
-//   if (cardInsert || cardTap || phoneTap) {
-//     debitCard(), creditCard(), phonePayment()
-//   }
-// }
-
 function debitCard() {
   if (debitTrans) {
     let array = [];
