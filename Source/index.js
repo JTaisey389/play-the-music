@@ -115,26 +115,6 @@ function phonePayment() {
   cardRemoval;
 }
 
-// function creditCard() {
-//   if (creditTrans) {
-//     let signature = "";
-//     onmousemove(signature.split);
-//     while (onmouseover) {
-//       let padInput = `${windowsigned}`;
-//       let signatureRequire;
-//       if (signature === padInput) {
-//         true;
-//       } else {
-//         if (padInput != signatureRequire) {
-//           console.log("Please sign and press okay");
-//         }
-//         false;
-//       }
-//     }
-//   }
-//   cardRemoval;
-// }
-
 function creditCard () {
   if(creditTrans) {
     let signature = '';
@@ -157,9 +137,9 @@ function creditCard () {
       let prompt = 'Please sign and press okay';
         prompt();
     }
-  } 
+  }
+  cardRemoval()
 }
-
 
 function storeGenerator () {
   let storeName = ['Trader-Joes', 'Safeway', 'Fred-Meyer', 'QFC'];
@@ -174,7 +154,7 @@ function cardRemoval () {
   if(debitCard || creditCard) {
     prompt()
   } 
-  onkeypress (cardRemoved);
+  onkeypress(cardRemoved);
 }
 
 function totalKey () {
