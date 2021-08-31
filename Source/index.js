@@ -59,12 +59,18 @@ function paymentSelect() {
     if (red) {
       // Edge Case to skip cashback
       let debt = "Debt";
+
       let credit = "Credit";
       let cardType = (debt, credit);
       cardType();
     }
+    if(cardInsert || cardTap || phoneTap == finished) {
+      
+    }
   }
 }
+
+
 
 function selectOption() {
   let cardInsert = option1;
