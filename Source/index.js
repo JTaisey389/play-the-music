@@ -55,7 +55,16 @@ function paymentSelect() {
       let amount3 = "$60";
       let display = (amount1, amount2, amount3);
       display();
-    }
+    } green.then ((paymentType) => {
+      let debit = "Debit";
+      let credit = "Credit";
+      let cardType = (debit, credit);
+      cardType(paymentType);
+      if (cardInsert || cardTap || phoneTap == finished) {
+        MouseEvent.altKey = debit(debitCard || phonePayment);
+        MouseEvent.ctrlKey = credit(creditCard);
+      }
+    }) 
     if (red) {
       // Edge Case to skip cashback
       let debit = "Debit";
