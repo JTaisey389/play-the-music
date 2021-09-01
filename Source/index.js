@@ -22,7 +22,7 @@ function paymentSort() {
   let phoneTransaction;
   let prompt = "Insert card, tap card or tap phone";
   if (cardReady) {
-    onclick === true;
+    MouseEvent.altKey === true;
   } else {
     prompt();
   }
@@ -31,7 +31,7 @@ function paymentSort() {
     true;
   }
 }
-onkeypress(paymentSort);
+MouseEvent.altKey(paymentSort);
 
 function paymentSelect() {
   let payOption1 = cardTransaction;
