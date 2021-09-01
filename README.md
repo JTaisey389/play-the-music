@@ -62,3 +62,9 @@
 - With the first three functions completed we have the first independent function that is triggered by a mouse event that signifies a card being inserted, card tap, or a phone tap. As the app is further developed research will be put into determining the actual trigger for when a card or phone event occurs. The function paymentSort may at some point be combined with other functions depending on the refactoring.
 
 - The paymentSelect function is triggered by the paymentSort, and has a set of edge cases for cash back options. These are displayed to the card reader so the user can select from the cash back option and what type of card transaction.
+
+- Once the edge cases are evaluated within paymentSelect, either the debitCard, creditCard or phonePayment function are called. Each of these have a set of conditionals for the type of payment selected, and are toward the later half of the call stack within the application
+
+- Now the paymentSelect is completed and the cardRemoval function is called and will activate the random storeGenerator to display a store name on the card reader.
+
+- Lastly we have the final independent function that is triggered by it's own event. The totalKey function is the last to be called, but it also has a conditional to check and see if the card transaction is complete. If they are not completed it will wait and then play the programed audio
