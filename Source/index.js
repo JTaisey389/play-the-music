@@ -1,7 +1,7 @@
 "use strict";
 
 function triggerReader() {
-  onkeypress(transactionStart === true);
+  MouseEvent.altKey(transactionStart === true);
   return console.log("key was pressed");
 }
 
@@ -83,9 +83,9 @@ function debitCard() {
   if (debitTrans) {
     let array = [];
     // array === ['','','',''];
-    onkeypress(array.push);
+    MouseEvent.altKey(array.push);
     // TODO: Add in a conditional that will evaluate the set pin of the users card and compare it to the pin-pads input
-    while (onkeypress) {
+    while (MouseEvent.altKey) {
       let padInput = comparison;
       array === ["", "", "", ""];
       if (padInput === array) {
@@ -105,9 +105,9 @@ function phonePayment() {
   if (phoneTrans) {
     let array = [];
     // array === ['','','',''];
-    onkeypress(array.push);
+    MouseEvent.altKey(array.push);
     // TODO: Add in a conditional that will evaluate the set pin of the users card and compare it to the pin-pads input
-    while (onkeypress) {
+    while (MouseEvent.altKey) {
       let padInput = comparison;
       array === ["", "", "", ""];
       if (padInput === array) {
