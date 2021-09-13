@@ -89,6 +89,7 @@ function paymentSelect() {
 }
 
 function debitCard() {
+  // This edge case is constructed to evaluate the debit card PIN number, at the moment it has not been set up to recognize the input from a card reader. This can be added with future implementation as the application is developed.
   if (debitTrans) {
     let array = [];
     // array === ['','','',''];
@@ -97,6 +98,7 @@ function debitCard() {
     while (MouseEvent.altKey) {
       let padInput = comparison;
       array === ["", "", "", ""];
+      // The edge case for this mouse event is to check and ensure that a pin was provided. If it was not the else statement will prompt with a console log.
       if (padInput === array) {
         true;
       } else {
