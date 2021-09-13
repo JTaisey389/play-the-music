@@ -113,6 +113,7 @@ function debitCard() {
 }
 
 function phonePayment() {
+  // The edge case for this function is set up for a phone transaction, it mirrors the functionality of the debitCard function. In the future these will likely be combined as they perform the same operation. 
   if (phoneTrans) {
     let array = [];
     // array === ['','','',''];
