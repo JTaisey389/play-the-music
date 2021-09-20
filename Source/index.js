@@ -27,12 +27,11 @@ class itemScan {
 function paymentSort() {
   let cardReady = paymentSelect;
   let phoneTransaction;
-  let prompt = "Insert card, tap card or tap phone";
   // Creating the edge case the triggers the paymentSelect function. In this edge case if the payment has not presented the else statement triggers the prompt. The prompt will be displayed on the card reader screen until the Mouse Event is activated. 
   if (cardReady) {
     MouseEvent.altKey === true;
   } else {
-    prompt();
+    Prompt();
   }
   //The trailing edge case is activated and this was added in to ensure that when a phone is taped the reader recognizes the event.
   if (phoneTransaction) {
