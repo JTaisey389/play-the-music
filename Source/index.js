@@ -8,15 +8,21 @@ function triggerReader() {
 function transactionStart() {
   //Creating the edge case that ensures that only when the triggerReader function is activated then ItemScan can take place. Otherwise the Mouse Event needs to be activated
   if (triggerReader) {
-    itemScan === true;
+    itemScan() === true;
   }
   false;
 }
-
-function itemScan() {
-  let prompt = "Insert card, tap card or tap phone";
-  prompt();
+class Prompt {
+  constructor (){
+    let prompt1 = "Insert card, tap card or tap phone"
+    itemScan = prompt1
+  }
+  
 }
+class itemScan {
+  prompt1();
+}
+
 
 function paymentSort() {
   let cardReady = paymentSelect;
