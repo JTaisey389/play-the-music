@@ -42,13 +42,13 @@ function paymentSort() {
 MouseEvent.altKey(paymentSort);
 
 function paymentSelect() {
-  let payOption1 = cardTransaction;
-  let payOption2 = phoneTransaction;
+  let payOption1;
+  let payOption2;
   // In this edge case the two types of payment are compiled into a conditional that will trigger a set of additional edge cases within the call stack. The main purpose of this edge case is to contain the other edge cases.
   if (payOption1 || payOption2) {
-    let cardInsert = option1;
-    let cardTap = option2;
-    let phoneTap = option3;
+    let cardInsert;
+    let cardTap;
+    let phoneTap;
     let prompt = "Cash Back";
     let green = "Yes";
     let red = "No";
@@ -56,27 +56,25 @@ function paymentSelect() {
     if (cardInsert || cardTap || phoneTap) {
       //Now that we have the conditions set for the edge case the next step is to evaluate depending on if a card is Inserted, Tapped or phone tapped. Once the payment has been presented the prompt will bring up the cash back options on the Card reader
       prompt(green || red)
+        if (green) {
+          let amount1 = "$20";
+          let amount2 = "$40";
+          let amount3 = "$60";
+          let display = (amount1, amount2, amount3);
+          display();
+      } green.then ((paymentType) => { // Within the edge case is a .then to trigger an additional function for either debit or credit card. 
+        let debit = "Debit";
+        let credit = "Credit";
+        let cardType = (debit, credit);
+        let finished = true;
+        cardType(paymentType);
+         // After displaying the two card options the edge case is created that checks to make sure that the payment type has been presented. This is done with a boolean where if the transaction is finished it is true
+           if (cardInsert || cardTap || phoneTap == finished) {
+            MouseEvent.altKey = debit(debitCard || phonePayment);
+            MouseEvent.ctrlKey = credit(creditCard);
+        }
+      })
     }
-    // This edge case is constructed to present the user with the amounts of cash back, this will in future implementation send that data back to the CRS.
-    if (green) { 
-      // TODO: The cashback amounts will need an if conditional to send to the Cash Register System (CRS). Future Implementation
-      let amount1 = "$20";
-      let amount2 = "$40";
-      let amount3 = "$60";
-      let display = (amount1, amount2, amount3);
-      display();
-    } green.then ((paymentType) => { // Within the edge case is a .then to trigger an additional function for either debit or credit card. 
-      let debit = "Debit";
-      let credit = "Credit";
-      let cardType = (debit, credit);
-      let finished = true;
-      cardType(paymentType);
-      // After displaying the two card options the edge case is created that checks to make sure that the payment type has been presented. This is done with a boolean where if the transaction is finished it is true
-      if (cardInsert || cardTap || phoneTap == finished) {
-        MouseEvent.altKey = debit(debitCard || phonePayment);
-        MouseEvent.ctrlKey = credit(creditCard);
-      }
-    }) 
     if (red) {
       // Edge Case to skip the cash back option and prompts right into checking if the the payment type has been presented
       let debit = "Debit";
@@ -90,6 +88,14 @@ function paymentSelect() {
         MouseEvent.ctrlKey = credit(creditCard);
       }
     }
+  }
+}
+
+class cardType {
+  constructor () {
+    let cardInsert;
+    let cardTap;
+    let phoneTap;
   }
 }
 
